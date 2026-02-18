@@ -1,13 +1,13 @@
-const p = document.querySelector("#result")
-const humanpoints = document.querySelector("#pontos")
-const machinepoints = document.querySelector("#pontosMaquina")
+const result = document.querySelector("#GameResult")
+const humanpoints = document.querySelector("#PlayerPoints")
+const machinepoints = document.querySelector("#MachinePoints")
 
-const humanplay = (humanchoice) => {
+const HumanPlay = (humanchoice) => {
     
-    playthegame(humanchoice, machineplay())
+    playthegame(humanchoice, MachinePlay())
 }
 
-const machineplay = (machinechoice) => {
+const MachinePlay = (machinechoice) => {
     const choices = ["rock", "paper", "scissors",]
     const randomnumber = Math.floor(Math.random() * 3)
     
@@ -18,17 +18,17 @@ let machinepointsnumebr = 0
 let humanpointsnumebr = 0
 
 const playthegame = (human, machine) =>{
-    console.log(human, machine)
+    console.log("Human: " + human + ", Machine: " + machine)
     if(human === machine){
-        p.innerHTML = "empate!"
+        result.innerHTML = "Empate!"
     }else if ( (human === 'rock' && machine === 'scissors') || (human === 'scissors' && machine === 'paper') || (human === 'paper' && machine === 'rock') ){
         humanpointsnumebr++
         humanpoints.innerHTML = humanpointsnumebr
-        p.innerHTML = "Você ganhou!"
+        result.innerHTML = "Você ganhou!"
 
     }else{
         machinepointsnumebr++
         machinepoints.innerHTML = machinepointsnumebr
-        p.innerHTML = "Você Perdeu!"
+        result.innerHTML = "Você Perdeu!"
     }
 }
