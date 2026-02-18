@@ -45,6 +45,6 @@ Neste projeto pratiquei:
 
 
 <p align="center">
-  <img src="./preview.png" width="600">
+  <img src="./img/preview.png" width="600">
 </p>
 
